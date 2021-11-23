@@ -1,22 +1,22 @@
 // need to test for each letter
 import {expect, it} from '@jest/globals';
-import {translate, reverseTranslate} from "./main" 
+import {morseTranslate, wordTranslate} from "./main" 
 
 it("should translate a to .-",()=>{
-   const result = translate("a");
+   const result = wordTranslate("a");
    expect(result).toBe(".-")
 })
 it("should translate a to -...",()=>{
-   const result = translate("b");
+   const result = wordTranslate("b");
    expect(result).toBe("-...")
 })
-it("should translate ab to .--...",()=>{
-   const result = translate("ab");
-   expect(result).toBe(".--...")
+it("should translate ab to .- -...",()=>{
+   const result = wordTranslate("ab");
+   expect(result).toBe(".- -...")
 })
 it("should translate a b to .- -...",()=>{
-   const result = translate("a b");
-   expect(result).toBe(".- -...")
+   const result = wordTranslate("a b");
+   expect(result).toBe(".- / -...")
 })
 
 // it("should take a string and place each letter into an array",()=>{
@@ -25,15 +25,15 @@ it("should translate a b to .- -...",()=>{
 // })
 
 it("should take a string, place each letter into an array, and then translate each letter",()=>{
-   const result = translate("sos");
-   expect(result).toBe("...---...");
+   const result = wordTranslate("sos");
+   expect(result).toBe("... --- ...");
 })
 it("should take morse and return a string",()=>{
-   const result = translate(".-");
+   const result = morseTranslate(".-");
    expect(result).toBe("a");
 })
 it("should take a morse word and return a string, including spaces between words",()=>{
-   const result = translate(".... .. / - .... . .-. .");
+   const result = morseTranslate(".... .. / - .... . .-. .");
    expect(result).toBe("hi there");
 })
 
