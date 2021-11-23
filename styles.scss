@@ -1,0 +1,51 @@
+@import "./variables/constants";
+@import "./variables/button";
+
+* {
+padding: 0;
+margin: 0;
+font-size: 10px;
+}
+
+body {
+   background-color: $backgroundColor;
+}
+
+header, main {
+   color: $fontColor;
+   font-size: 8rem;
+   input {
+      height: 8rem;
+      border: none;
+      background-color: $backgroundColor;
+      color: $fontColor;
+      font-size: 8rem;
+      text-align: center;
+      outline: none;
+      flex-wrap: wrap;
+      font-family: $primaryFont;
+   }
+   .output {
+      color: $fontColor;
+      font-size: 8rem;
+      flex-wrap: wrap;
+      font-family: $primaryFont;
+   }
+}
+
+h1 {
+   font-size: 10rem;
+   text-align: center;
+   font-family: $primaryFont;
+}
+
+main {
+   margin: auto;
+   padding-top: 10rem;
+   max-width: 80rem;
+   gap: 10rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}

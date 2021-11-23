@@ -58,27 +58,37 @@ let wordObj = {
 //    }
 //    return translation
 // }
+const submitButton = document.querySelector(".button")
+const translationInput = document.querySelector(".input")
+const translationOutput = document.querySelector(".output")
 
+submitButton.addEventListener("click",()=>{
+   return translationOutput.innerHTML = `${translator(translationInput.value)}`
+})
 
-
-export const reverseTranslate = (morse) => {
+// export
+ const reverseTranslate = (morse) => {
    return Object.keys(wordObj).find(key => wordObj[key] === morse);
 }
-export const wordTranslate = (word) => {
+// export
+ const wordTranslate = (word) => {
    const wordArr = word.toLowerCase().split("")
    const morseArr = wordArr.map(w => wordObj[w]).join(" ")
    return morseArr
 }
-export const morseTranslate = (word) => {
+// export
+ const morseTranslate = (word) => {
    const wordArr = word.split("/")
    const lettersArr = wordArr.map(w => w.split(" ").map(l => reverseTranslate(l)).join("")).join(" ")
    return lettersArr
 }
 
-export const translator = (usertext) => {
+// export
+ const translator = (usertext) => {
+    console.log(usertext)
  if (usertext.indexOf(".")===-1 || usertext.indexOf("-")===-1){
-   wordTranslate(usertext)
+   return (wordTranslate(usertext))
 }else {
-   morseTranslate(usertext)
+   return (morseTranslate(usertext))
    }
 }

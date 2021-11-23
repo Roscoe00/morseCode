@@ -1,0 +1,15 @@
+@import "./constants";
+
+.button {
+   background-color: $backgroundColor;
+   border: 10px solid $fontColor;
+   color: $fontColor;
+   font-size: 3rem;
+   padding: 2rem 1rem;
+   font-family: $primaryFont;
+}
+
+.button:hover {
+   border: 10px solid $highlightColor;
+   color: $highlightColor;
+}

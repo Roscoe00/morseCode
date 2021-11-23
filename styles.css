@@ -1,0 +1,62 @@
+.button {
+  background-color: #0a0a25;
+  border: 10px solid #ebdfc6;
+  color: #ebdfc6;
+  font-size: 3rem;
+  padding: 2rem 1rem;
+  font-family: "Prompt", sans-serif;
+}
+
+.button:hover {
+  border: 10px solid #f6f872;
+  color: #f6f872;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+}
+
+body {
+  background-color: #0a0a25;
+}
+
+header, main {
+  color: #ebdfc6;
+  font-size: 8rem;
+}
+header input, main input {
+  height: 8rem;
+  border: none;
+  background-color: #0a0a25;
+  color: #ebdfc6;
+  font-size: 8rem;
+  text-align: center;
+  outline: none;
+  flex-wrap: wrap;
+  font-family: "Prompt", sans-serif;
+}
+header .output, main .output {
+  color: #ebdfc6;
+  font-size: 8rem;
+  flex-wrap: wrap;
+  font-family: "Prompt", sans-serif;
+}
+
+h1 {
+  font-size: 10rem;
+  text-align: center;
+  font-family: "Prompt", sans-serif;
+}
+
+main {
+  margin: auto;
+  padding-top: 10rem;
+  max-width: 80rem;
+  gap: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
